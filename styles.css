@@ -1,0 +1,265 @@
+/* Question 0. Import a font and make all text in the body using that font. Check the homework instructions for more information!*/
+@font-face {
+    font-family: Proxima_Nova;
+    src: url(./assets/ProximaNova/proximanova_regular.ttf);
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url(./Assets/Merriweather/Merriweather-Regular.ttf);
+}
+
+/* Set all text in the body to be a certain color (whatever color you choose!)*/
+/* Center all text in the body. Check out the homework spec for help.*/
+
+body {
+    margin: 25px auto;
+    margin-bottom: 0;
+    max-width: 100%;
+    font-family: Proxima_Nova;
+    text-align: center;
+    color: black;
+    background-color: #fffdf7;
+}
+
+/* Question 1: Add a border, border radius, box shadow, or whatever other styling you'd like to your image! */
+img {
+    width: 200px;
+    height: 200px;
+    border: 0.2rem solid #1d3557;
+    border-radius: 50%;
+}
+
+#profile {
+    background-image: url(./Assets/GG_Bridge_SF_300mm_MRP_Sunset_20191116_Trim_2000x642_rev0.jpg);
+    background-position-y: -2dvh ;
+    background-size: 100%;
+    background-position-x: center;
+    margin-top: -10px;
+}
+
+h1 {
+    font-size: 45px;
+    transition: ease-in-out 0.5s;
+    color: #16537e;
+    opacity: 85%;
+    background-color: #fffdf7;
+
+}
+
+.brsmall {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+/* Question 2. Select the h1 tag and add a hover effect! You can change the background-color, color, opacity, or anything you want.*/
+
+/* YOUR CODE HERE */
+h1:hover {
+  font-size: 350%;
+  opacity: 100%;  
+}
+
+
+/* Question 3. Add different background colors for all the different sections (Education, Experience, etc.) by selecting them via ids. */
+
+#education {
+    background-color: #cfe2f3;
+    text-align: center;
+}
+
+#experience {
+    background-color: #9ebccf;
+}
+
+#projects {
+    background-color: #fff9e7;
+}
+
+/* Question 4. Add margin, padding, and borders to the section-wrapper class! */
+
+.section-wrapper {
+    background-color: #fffdf7;
+    scroll-padding: 20px;
+    padding: 3% 50px;
+    padding-top: 0px;
+    border-style: solid;
+    border-bottom: 10px #16537e
+}
+
+
+
+/* Experience Section */
+
+/* Question 5a. Use CSS Flexbox to display your experiences as shown in the diagram.
+ Hint: Check the homework spec for some help!*/
+
+.experience-wrapper {
+    display: flex; /* YOUR CODE HERE */
+    gap: 1em; /*YOUR CODE HERE*/
+    width: auto;
+    flex-basis: 0;
+    justify-content: space-evenly; /*YOUR CODE HERE*/
+}
+
+/* Question 5b. Add a background color to the experience-list-item class.*/
+
+.experience-list-item {
+    text-align: left;
+    width: 33%;
+    padding: 3px 20px;
+    margin-bottom: 20px;
+    /* Side note: the transition attribute makes effects look smoother! 
+    This means the hover effect will slowly kick in for 0.2s. */
+}
+
+.experience-list-item {
+    --c: #000000; /* the color */
+    --b: .2em;    /* border length*/
+    --d: 10px;    /* the cube depth */
+    cursor: pointer;
+    
+    --_s: calc(var(--d) + var(--b));
+    
+    color: var(--c);
+    border: solid #000000;
+    border-width: var(--b) var(--b) var(--_s) var(--_s);
+    background:
+      conic-gradient(at left var(--d)  bottom var(--d),
+        white 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
+      conic-gradient(at left var(--_s) bottom var(--_s),
+        white 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+    transform: translate(calc(var(--d)/-1),var(--d));
+    clip-path: 
+      polygon(
+       var(--d) 0%, 
+       var(--d) 0%, 
+       100% 0%, 
+       100% calc(100% - var(--d)),
+       100% calc(100% - var(--d)),
+       var(--d) calc(100% - var(--d))
+      );
+    transition: 0.5s;
+  }
+  .experience-list-item:hover {
+    transform: translate(0,0);
+    clip-path: 
+      polygon(
+       0% var(--d), 
+       var(--d) 0%, 
+       100% 0%, 
+       100% calc(100% - var(--d)), 
+       calc(100% - var(--d)) 100%, 
+       0% 100%
+     );
+  }
+
+/* Question 5c. Let's take a break! Add a hover effect to each experience-list-item div. 
+Experiment with border, border-radius, background-color, or whatever you want!*/
+
+
+h2 {
+    margin-top: 5px;
+    position: relative; 
+    text-decoration: none;
+    padding-top: 2%;
+    display: inline-block;
+}
+
+h2::before {
+    content: "";
+    width: 100%; 
+    position: absolute; 
+    bottom: -5px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #18272F;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s ease-in-out;
+}
+      
+h2:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* Projects Section */
+
+/* Question 6. Use CSS Flexbox and hover effects for the Projects Section, just as you did for the Experience Section! */
+
+.project-wrapper {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/* Question 5b. Add a background color to the experience-list-item class.*/
+
+.project-list-item {
+    border: 3px solid darkslategrey;
+    text-align: left;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    transition: ease-in-out 0.4s;
+}
+
+/* Hover effect on project-list-item */
+.project-list-item:hover {
+    border-color: var(--highlight); /* Example hover effect */
+}
+
+.project-list-item h3 {
+    box-shadow: inset 0 0 0 0 var(--main);
+    color: var(--highlight);
+    padding: 0 .25rem;
+    margin: 0.5rem -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+
+/* Applying hover effects to h3 titles based on parent hover state */
+.project-list-item:hover h3 {
+    color: var(--main);
+    --s: ;
+    box-shadow: inset var(--size) 0 0 0 var(--highlight);
+}
+
+
+
+#latam {
+    --main: #ee1750; 
+    --highlight: #2A0087;
+    --size: 8rem;
+}
+
+#sosyncd {
+    --main: #f2f2f2;
+    --highlight: #E84A69;
+    --size: 10.5rem;
+}
+
+#bftw {
+    --main: white;
+    --highlight: black;
+    --size: 12rem;
+}
+
+
+/* Contact Section */
+/* Question 7. Make your link look something like the one shown in the homework spec!*/
+
+button{
+    background-color: #1d3557;
+    padding: 0.5em;
+    border-radius: 10%;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
