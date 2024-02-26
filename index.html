@@ -4,32 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles1.css">
     <title>clarkboyce</title>
 </head>
 <body>
-        <h1>CLARK BOYCE</h1>
         
-        <div id="profile">
-            <img src="./Assets/IMG_0266.jpg" alt="Clark Boyce">
+    <div class="pagetop">
+    <h1>CLARK BOYCE</h1>
+        <div class="pages">
+            <h4>about</h4>
+            <h4>work</h4>
+            <h4>contact</h4>
         </div>
+    </div>
         
-        <div class="section-wrapper" id="education">
+        <div class="section-wrapper" style="padding: 2% 9%" id="education">
             <h2 href="#">Education</h2>
             <br>
             <b>B.A. Economics, Minor in Data Science  |</b>
-            <i>GPA: 3.70</i>
+            <i>GPA: 3.71</i>
             <br>
-            <div style="text-align: left;">
-                <b style="font-size: larger;">Relevant Coursework</b> 
+            <div style="text-align: left; margin-top: 1.5%;">
+                <b style="font-size: larger;">Coursework</b> 
+                <div style="margin-top: 10px; margin-left: 2%;">
                 <p>
-                    <b>Economics and Finance:</b> Corporate Finance, Financial Accounting, Econometrics, Micro & Macroeconomics, International Trade, International Finance, Poverty and Development Economics
+                    <b>Economics and Finance:</b> Corporate Finance, Financial Accounting, Econometrics, Micro & Macroeconomics, International Trade & Finance, Development Economics
                     <span class="brsmall"></span>
                     <b>Data Science and Computing:</b> Data Structures,  Principals & Techniques of Data Science, Applied Geographical Data Science, Linear Algebra, Web Development
                     <span class="brsmall"></span>
-                    <b>Other:</b> Logistics and Supply Chain Network Design, International SME Consulting, Tourism Development, Oil & Gas Operations and Markets 
+                    <b>Other:</b> Supply Chain Network Design, International SME Consulting, Tourism Development, Oil & Gas Operations and Markets 
                 </p>
-
+                </div>
                 <i>Languages: English (Fluent), Chinese (Intermediate)</i>
                 <br><br>
                 <i>Technical Skills: Python, Java, SQL, Tableau, Power BI, Financial Modeling (3-statement, DCF, CRE)</i>
@@ -40,7 +45,7 @@
             <h2 href="#">Experience</h2>
             <div class="experience-wrapper">
                 <div class="experience-list-item">
-                    <h3>Newmark</h3>
+                    <h3 class="ex-list-h3">Newmark</h3>
                     <h5>Debt and Structured Finance Intern</h5>
                     <ul>
                         <li>Underwrote over $400 million in debt financing for senior and bridge loans and $80 million in retail property sales using DCF models.</li>
@@ -49,7 +54,7 @@
                     </ul>
                 </div>
                 <div class="experience-list-item">
-                    <h3>Berkeley International Consulting</h3>
+                    <h3 class="ex-list-h3">Berkeley International Consulting</h3>
                     <h5>President and Senior Advisor</h5>
                     <ul>
                         <li>Founding member of BIC which has expanded from its inception with seven members to over 40 members representing 20+ countries.</li>
@@ -58,7 +63,7 @@
                     </ul>
                 </div>
                 <div class="experience-list-item">
-                    <h3>UC Berkeley Scholarships Office</h3>
+                    <h3 class="ex-list-h3">UC Berkeley Scholarships Office</h3>
                     <h5>Assistant Analyst</h5>
                     <ul>
                         <li>Oversaw cleaning, transformation, and migration of data concerning ~1200 scholarships and grants to new SQL database which helped remove data inaccuracies and streamline financial reporting processes with Berkely endowment and other external awarding entities.</li>
@@ -66,27 +71,25 @@
                     </li>
                     </ul>
                 </div>
-                <!-- Question 3c. Create a div that contains/wraps around ALL the experience-list-item divs named "experience-wrapper"! You'll need this later. -->
             </div> 
         </div>
         
 
         <div class="section-wrapper" id="projects">
-            <h2 href="#">Projects</h2>
-                <!-- Question 4a. Create a few project-list-items divs. Fill these in with your favorite projects! -->
+            <h2 href="#" style="padding-top: 1%; margin-bottom: 0.3em;">Projects</h2>
             <div class="project-wrapper">
                 <div class="project-list-item">
-                    <h3 id="latam">LATAM Labs</h3>
+                    <h3 id="latam">LATAM Airlines</h3>
                     <p>Created an automated workflow in Pipedream which utilized Google Bard, GPT-3.5, and Google Maps APIs to create a personalized trip plan based on a LATAM destination. Additional API’s were used to pull and utilize flight, hotel, and activity data for final result. Designed front-end mockups for AI chatbot, transportation, and trip planning app features dedicated to passenger experience.</p>
                 </div>
                 <div class="project-list-item">
                     <h3 id="sosyncd">So-Syncd Dating</h3>
                     <!--Also can add the logos for each of them and link the companies websites-->
-                    <p>Led team of consultants to create go-to-market strategy for UK-based dating app in five US metros with budgets between $5k and $50k. Developed stakeholder interview and performed user journey mapping to find pain points affecting customer retention and ease of use. Prototyped 10 new features in Figma focused around in-app navigation, profile personalization, and increasing user engagement.</p>
+                    <p>Developed go-to-market strategy for UK-based dating app in five US metros with budgets between $5k and $50k. Created stakeholder interview and performed user journey mapping to find pain points affecting customer retention and ease of use. Prototyped 10 new features in Figma focused around in-app navigation, profile personalization, and increasing user engagement.</p>
                 </div>
-                <div class="project-list-item">
+               <div class="project-list-item">
                     <h3 id="bftw">Bread for the World</h3>
-                    <p>Project Description Here</p>
+                    <p> Worked with the data management team and utilized Python to clean and format large datasets from FAO (140k entries) and the World Bank (69k entries). Focused on enhancing data quality for advanced visualizations and regional analysis of political and economic stability on food security indicators. We employed logistic regression analysis to identify four key indicators including national cereal import dependency ratio, absence of violence and terrorism, and total retail distribution losses.</p>
                 </div>
                 <div class="project-list-item">
                     <h3>Web Design Project</h3>
