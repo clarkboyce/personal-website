@@ -23,6 +23,7 @@ body {
 }
 
 .pages {
+    color: #000000;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -56,14 +57,6 @@ h1:hover {
 
 #education {
     text-align: center;
-}
-
-#experience {
-
-}
-
-#projects {
-    
 }
 
 h2 {
