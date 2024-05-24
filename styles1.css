@@ -185,11 +185,6 @@ h2:hover::before {
     transition: ease-in-out 0.4s;
 }
 
-/* Hover effect on project-list-item */
-.project-list-item:hover {
-    border-color: var(--highlight); /* Example hover effect */
-}
-
 .project-list-item h3 {
     box-shadow: inset 0 0 0 0 var(--main);
     color: var(--highlight);
@@ -243,5 +238,11 @@ button:hover {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    box-shadow: inherit;
 }
