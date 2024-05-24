@@ -220,7 +220,7 @@ h2:hover::before {
 
 #campusticket {
     --main: black;
-    --highlight: linear-gradient(to right, #007ae9, #008AE8, #00ABCF, #00CFB2);
+    --highlight: #008AE8;
     --size: 10rem;
 }
 
@@ -238,11 +238,5 @@ button:hover {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
-}
-
-a:hover {
-    color: inherit;
-    box-shadow: inherit;
 }
