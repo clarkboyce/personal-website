@@ -223,9 +223,16 @@ h2:hover::before {
     --size: 12rem;
 }
 
+#campusticket {
+    --main: black;
+    --highlight: linear-gradient(to right, #007ae9, #008AE8, #00ABCF, #00CFB2);
+    --size: 10rem;
+}
+
 
 /* Contact Section */
 button{
+    padding-left: 2px;
     background-color: #1d3557;
     padding: 0.5em;
     border-radius: 10%;
